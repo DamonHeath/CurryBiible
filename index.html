@@ -11,7 +11,13 @@
   <header class="site-header">
     <a href="#" class="logo">Curry Bible</a>
 
-    <nav class="main-nav">
+    <button id="burgerMenu" class="burger-menu" aria-label="Open navigation menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav id="mainNav" class="main-nav">
       <a href="#">Home</a>
       <a href="#">Our Mission</a>
       <a href="#">Curry Club UK</a>
@@ -32,7 +38,8 @@
         <p>No fluff. No fake praise. Just real curry house reviews from people who take this seriously.</p>
 
         <div class="hero-buttons">
-          <a href="#" class="btn primary">Explore Reviews</a>
+          <a href="#" class="btn primary">Curry Club UK</a>
+          <a href="#" class="btn primary">Curry Club Europe</a>
           <a href="#" class="btn secondary">Play Tetris</a>
         </div>
       </div>
@@ -131,7 +138,11 @@
 
     <section class="section cta-section">
       <h2>Want more brutally honest curry reviews?</h2>
-      <a href="#" class="btn primary">Head To Our Blog</a>
+
+      <div class="cta-buttons">
+        <a href="#" class="btn primary">Curry Club UK</a>
+        <a href="#" class="btn primary">Curry Club Europe</a>
+      </div>
     </section>
 
     <section class="section owner-section">
@@ -142,7 +153,43 @@
   </main>
 
   <footer class="site-footer">
-    <p>&copy; 2026 Curry Bible. All rights reserved.</p>
+    <div class="footer-grid">
+      <div>
+        <h3>Curry Bible</h3>
+        <p>&copy; 2026 Curry Bible. All rights reserved.</p>
+      </div>
+
+      <div>
+        <h3>Pages</h3>
+        <div class="footer-links">
+          <a href="#">Home</a>
+          <a href="#">Our Mission</a>
+          <a href="#">Curry Club UK</a>
+          <a href="#">Curry Club Europe</a>
+          <a href="#">Cool Curries</a>
+          <a href="#">Return Visits</a>
+          <a href="#">Retro Games</a>
+        </div>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <a href="mailto:thecurryclub2025@gmail.com">thecurryclub2025@gmail.com</a>
+
+        <h3 class="socials-title">Socials</h3>
+        <a href="https://www.instagram.com/curryclubgram" target="_blank" rel="noopener noreferrer">
+          Instagram: curryclubgram
+        </a>
+      </div>
+
+      <div>
+        <h3>Whats The Point Of This</h3>
+        <p>
+          Curry Bible exists to document proper Curry Club reviews, highlight the best and worst visits,
+          and give curry lovers a place to explore honest opinions, questionable decisions, and great food.
+        </p>
+      </div>
+    </div>
   </footer>
 
   <script src="script.js"></script>
