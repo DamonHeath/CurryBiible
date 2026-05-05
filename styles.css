@@ -56,6 +56,12 @@ a {
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
 }
 
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 body.dark-mode .site-header {
   background: rgba(22, 16, 12, 0.92);
 }
@@ -405,6 +411,14 @@ body.dark-mode .site-header {
 .footer-links a:hover,
 .site-footer a:hover {
   color: white;
+}
+
+.footer-copyright {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(245, 230, 211, 0.25);
+  text-align: center;
+  font-size: 0.95rem;
 }
 
 .socials-title {
