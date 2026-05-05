@@ -1,0 +1,22 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Node (in case you expand later)
+node_modules/
+dist/
+build/
+
+# Environment files
+.env
+
+# IDE files
+.vscode/
+.idea/
+
+# Misc
+*.swp
+*.bak
