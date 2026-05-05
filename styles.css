@@ -171,6 +171,11 @@ body.dark-mode .site-header {
   flex-wrap: wrap;
 }
 
+.hero-btn-uk,
+.hero-btn-europe {
+  gap: 0.35rem;
+}
+
 .cta-buttons {
   justify-content: center;
 }
@@ -455,6 +460,13 @@ body.dark-mode .site-header {
     width: 100%;
     padding: 0.45rem 0;
   }
+
+  .hero-btn-uk,
+.hero-btn-europe {
+  flex-direction: column;
+  gap: 0.15rem;
+  line-height: 1.15;
+}
 
   .journey,
   .member-awards,
