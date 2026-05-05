@@ -1314,3 +1314,136 @@ body.dark-mode .site-header {
     width: 100%;
   }
 }
+
+/* =====================
+   RETURN VISITS PAGE
+===================== */
+
+.return-visits-hero {
+  min-height: 48vh;
+  display: flex;
+  align-items: center;
+  padding: 6%;
+  background:
+    linear-gradient(rgba(43, 26, 18, 0.76), rgba(43, 26, 18, 0.84)),
+    url("https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.return-visits-hero-content {
+  max-width: 920px;
+}
+
+.return-visits-hero h1 {
+  font-size: clamp(3rem, 7vw, 5.8rem);
+  line-height: 0.95;
+  margin-bottom: 1.25rem;
+}
+
+.return-visits-hero p {
+  font-size: 1.2rem;
+  max-width: 720px;
+}
+
+.return-visit-card {
+  background: var(--surface);
+  border-radius: 32px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  transition: transform 0.2s ease;
+}
+
+.return-visit-card:hover {
+  transform: translateY(-4px);
+}
+
+.return-visit-image {
+  min-height: 320px;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.1)),
+    url("https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=900&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+.return-visit-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.return-visit-content h2 {
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  line-height: 1.05;
+  margin-bottom: 0.75rem;
+}
+
+.return-visit-content p {
+  color: var(--muted);
+  font-size: 1.05rem;
+  max-width: 760px;
+}
+
+.return-visit-content p + p {
+  margin-top: 0.85rem;
+}
+
+.return-visit-content .btn {
+  margin-top: 1.4rem;
+}
+
+.featured-return-visit .return-visit-image {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.1)),
+    url("https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+
+/* =====================
+   RETURN VISITS RESPONSIVE
+===================== */
+
+@media (max-width: 700px) {
+  .return-visit-card {
+    grid-template-columns: 1fr;
+  }
+
+  .return-visit-image {
+    min-height: 240px;
+  }
+}
+
+@media (max-width: 600px) {
+  .return-visits-hero {
+    min-height: 42vh;
+    padding: 5%;
+  }
+
+  .return-visits-hero h1 {
+    font-size: clamp(2.7rem, 13vw, 4.5rem);
+  }
+
+  .return-visits-hero p {
+    font-size: 1.05rem;
+  }
+
+  .return-visit-card {
+    border-radius: 26px;
+  }
+
+  .return-visit-content {
+    padding: 1.5rem;
+  }
+
+  .return-visit-content .btn {
+    width: 100%;
+  }
+}
