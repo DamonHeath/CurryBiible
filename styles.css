@@ -575,3 +575,312 @@ body.dark-mode .site-header {
     scrollbar-width: none;
   }
 }
+
+/* =====================
+   OUR MISSION PAGE
+===================== */
+
+.mission-hero {
+  min-height: 72vh;
+  display: flex;
+  align-items: center;
+  padding: 6%;
+  background:
+    linear-gradient(rgba(43, 26, 18, 0.78), rgba(43, 26, 18, 0.82)),
+    url("https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.mission-hero-content {
+  max-width: 860px;
+}
+
+.mission-hero h1 {
+  font-size: clamp(3rem, 7vw, 6.2rem);
+  line-height: 0.95;
+  margin-bottom: 1.5rem;
+}
+
+.mission-hero p {
+  font-size: 1.25rem;
+  max-width: 680px;
+}
+
+.mission-intro-card {
+  background: var(--surface);
+  padding: 3rem;
+  border-radius: 32px;
+  box-shadow: var(--shadow);
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.mission-intro-card h2,
+.mission-split h2,
+.review-method h2,
+.process-card h2,
+.europe-note-card h2,
+.mission-final h2 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.05;
+  margin-bottom: 1.25rem;
+}
+
+.mission-intro-card p,
+.mission-text-stack p,
+.criteria-card p,
+.process-card p,
+.process-step p,
+.europe-note-card p,
+.mission-final p {
+  color: var(--muted);
+  font-size: 1.08rem;
+}
+
+.mission-intro-card p + p,
+.mission-text-stack p + p,
+.process-card p + p {
+  margin-top: 1rem;
+}
+
+.mission-split {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.mission-split.reverse {
+  grid-template-columns: 1.25fr 1fr;
+}
+
+.mission-split.reverse > div:first-child {
+  order: 2;
+}
+
+.mission-split.reverse > div:last-child {
+  order: 1;
+}
+
+.mission-text-stack {
+  background: var(--surface);
+  padding: 2.5rem;
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+}
+
+.criteria-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.25rem;
+}
+
+.criteria-card {
+  background: var(--surface);
+  padding: 2rem;
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease;
+}
+
+.criteria-card:hover {
+  transform: translateY(-6px);
+}
+
+.criteria-card span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 1.25rem;
+  border-radius: 50%;
+  background: var(--primary);
+  color: var(--accent);
+  font-weight: 900;
+}
+
+.criteria-card h3 {
+  font-size: 1.35rem;
+  margin-bottom: 0.75rem;
+}
+
+.process-section {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.process-card {
+  background: linear-gradient(135deg, #fff1d8, #d9a066);
+  color: #2b1a12;
+  padding: 3rem;
+  border-radius: 32px;
+  box-shadow: var(--shadow);
+}
+
+.process-card .eyebrow {
+  color: #6b3e26;
+}
+
+.process-card p {
+  color: #3d2619;
+}
+
+.process-steps {
+  display: grid;
+  gap: 1rem;
+}
+
+.process-step {
+  background: var(--surface);
+  padding: 1.5rem;
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.process-step span {
+  width: 18px;
+  height: 18px;
+  background: var(--primary);
+  border-radius: 50%;
+  margin-top: 0.35rem;
+}
+
+.europe-note {
+  padding-top: 2rem;
+}
+
+.europe-note-card {
+  background:
+    linear-gradient(135deg, rgba(43, 26, 18, 0.92), rgba(107, 62, 38, 0.9)),
+    url("https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 4rem;
+  border-radius: 36px;
+  box-shadow: var(--shadow);
+}
+
+.europe-note-card p {
+  color: #f5e6d3;
+  max-width: 760px;
+}
+
+.mission-final {
+  text-align: center;
+}
+
+.mission-final p {
+  max-width: 720px;
+  margin: 0 auto 1.75rem;
+}
+
+.mission-final-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+
+/* =====================
+   OUR MISSION RESPONSIVE
+===================== */
+
+@media (max-width: 1200px) {
+  .criteria-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1000px) {
+  .mission-split,
+  .mission-split.reverse,
+  .process-section {
+    grid-template-columns: 1fr;
+  }
+
+  .mission-split.reverse > div:first-child,
+  .mission-split.reverse > div:last-child {
+    order: initial;
+  }
+
+  .criteria-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .mission-hero {
+    min-height: 68vh;
+    padding: 5%;
+  }
+
+  .mission-hero h1 {
+    font-size: clamp(2.8rem, 13vw, 4.7rem);
+  }
+
+  .mission-hero p {
+    font-size: 1.1rem;
+  }
+
+  .mission-intro-card,
+  .mission-text-stack,
+  .process-card,
+  .europe-note-card {
+    padding: 2rem;
+    border-radius: 24px;
+  }
+
+  .criteria-grid {
+    display: flex;
+    gap: 1.25rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 1rem;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .criteria-card {
+    flex: 0 0 86%;
+    scroll-snap-align: start;
+  }
+
+  .criteria-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .criteria-grid {
+    scrollbar-width: none;
+  }
+
+  .process-section {
+    gap: 1.25rem;
+  }
+
+  .process-step {
+    padding: 1.35rem;
+  }
+
+  .europe-note {
+    padding-top: 1.75rem;
+  }
+
+  .mission-final-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .mission-final-buttons .btn {
+    width: 100%;
+  }
+}
