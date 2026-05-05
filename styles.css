@@ -170,7 +170,10 @@ body.dark-mode .site-header {
 }
 
 .btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   padding: 0.95rem 1.35rem;
   border-radius: 999px;
   font-weight: 900;
@@ -472,18 +475,26 @@ body.dark-mode .site-header {
     max-width: 420px;
   }
 
-  .hero-btn-tetris {
-    grid-column: 1 / -1;
-    justify-self: center;
-    order: -1;
-  }
-
   .hero-btn-uk {
     grid-column: 1;
   }
 
   .hero-btn-europe {
     grid-column: 2;
+  }
+
+  .hero-btn-tetris {
+    grid-column: 1 / -1;
+    justify-self: center;
+    min-width: 180px;
+  }
+
+  .hero-buttons .btn {
+    min-height: 72px;
+  }
+
+  .hero-btn-tetris {
+    min-height: 58px;
   }
 
   .section {
@@ -510,5 +521,31 @@ body.dark-mode .site-header {
     top: 88px;
     width: 75%;
     padding: 1.5rem 1rem;
+  }
+
+  .chronicles {
+    overflow: hidden;
+  }
+
+  .review-grid {
+    display: flex;
+    gap: 1.25rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 1rem;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .review-card {
+    flex: 0 0 86%;
+    scroll-snap-align: start;
+  }
+
+  .review-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .review-grid {
+    scrollbar-width: none;
   }
 }
