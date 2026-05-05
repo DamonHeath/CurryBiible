@@ -1161,3 +1161,23 @@ body.dark-mode .site-header {
     width: 100%;
   }
 }
+
+/* =====================
+   CURRY BIBLE EUROPE ARCHIVE PAGE
+===================== */
+
+.europe-archive-hero {
+  background:
+    linear-gradient(rgba(43, 26, 18, 0.76), rgba(43, 26, 18, 0.84)),
+    url("https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+.europe-review-image {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.1)),
+    url("https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=900&q=80");
+  background-size: cover;
+  background-position: center;
+}
