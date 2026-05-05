@@ -415,19 +415,28 @@ body.dark-mode .site-header {
 
   .main-nav {
     position: absolute;
-    top: 78px;
-    left: 0;
-    width: 100%;
-    padding: 1.5rem 6%;
+    top: 88px;
+    left: 50%;
+    width: 75%;
+    transform: translateX(-50%);
+    padding: 1.5rem;
     background: var(--surface);
     display: none;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
     gap: 1rem;
     box-shadow: var(--shadow);
+    border-radius: 24px;
   }
 
   .main-nav.active {
     display: flex;
+  }
+
+  .main-nav a {
+    width: 100%;
+    padding: 0.45rem 0;
   }
 
   .journey,
@@ -456,8 +465,29 @@ body.dark-mode .site-header {
     min-height: 75vh;
   }
 
+  .hero-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    max-width: 420px;
+  }
+
+  .hero-btn-tetris {
+    grid-column: 1 / -1;
+    justify-self: center;
+    order: -1;
+  }
+
+  .hero-btn-uk {
+    grid-column: 1;
+  }
+
+  .hero-btn-europe {
+    grid-column: 2;
+  }
+
   .section {
-    padding: 3.5rem 5%;
+    padding: 1.75rem 5%;
   }
 
   .story-card,
@@ -467,13 +497,18 @@ body.dark-mode .site-header {
     border-radius: 24px;
   }
 
+  .games-section {
+    margin: 1.75rem 5%;
+  }
+
   .theme-toggle {
     padding: 0.65rem 0.85rem;
     font-size: 0.8rem;
   }
 
   .main-nav {
-    top: 78px;
-    padding: 1.5rem 5%;
+    top: 88px;
+    width: 75%;
+    padding: 1.5rem 1rem;
   }
 }
