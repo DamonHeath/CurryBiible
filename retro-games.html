@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Retro Games | Curry Bible</title>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-left">
+      <button id="burgerMenu" class="burger-menu" type="button" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <a href="index.html" class="logo">Curry Bible</a>
+    </div>
+
+    <nav id="mainNav" class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="our-mission.html">Our Mission</a>
+      <a href="curry-bible-uk.html">Curry Bible UK</a>
+      <a href="curry-bible-europe.html">Curry Bible Europe</a>
+      <a href="cool-curries.html">Cool Curries</a>
+      <a href="return-visits.html">Return Visits</a>
+      <a href="retro-games.html">Retro Games</a>
+    </nav>
+
+    <button id="themeToggle" class="theme-toggle">Dark Mode</button>
+  </header>
+
+  <main>
+    <section class="retro-hero">
+      <div class="retro-hero-content">
+        <p class="eyebrow">Retro Games</p>
+        <h1>Tetris, Curry Bible style.</h1>
+        <p>
+          Too full to move? Good. Stay seated, chase the high score, and prove you have better reactions
+          than the rest of the Curry Bible table.
+        </p>
+      </div>
+    </section>
+
+    <section class="section retro-intro">
+      <div>
+        <p class="eyebrow">Play Now</p>
+        <h2>One classic game. One leaderboard. No excuses.</h2>
+      </div>
+
+      <p>
+        This is the first of the Curry Bible retro games section. For now, the leaderboard saves locally in your browser.
+        When the site moves to WordPress, the leaderboard can be upgraded to save scores globally for everyone.
+      </p>
+    </section>
+
+    <section class="tetris-page-shell">
+      <div class="tetris-page-header">
+        <div>
+          <p class="eyebrow">Curry Bible Arcade</p>
+          <h2>Tetris</h2>
+        </div>
+
+        <p>
+          Clear lines, climb the leaderboard, and do not embarrass yourself after a full curry.
+        </p>
+      </div>
+
+      <div class="tetris-v2" id="tetris-v2">
+        <div class="tetris-layout">
+          <div class="tetris-stage" id="tetris-stage">
+            <canvas width="320" height="640" id="tetris-game"></canvas>
+
+            <div class="tetris-overlay" id="tetris-overlay">
+              <div class="tetris-card">
+                <h2 class="tetris-title" id="tetris-title">Tetris</h2>
+
+                <label class="tetris-label" for="tetris-difficulty">Difficulty</label>
+                <select id="tetris-difficulty" class="tetris-select">
+                  <option value="easy">Easy</option>
+                  <option value="normal" selected>Normal</option>
+                  <option value="hard">Hard</option>
+                </select>
+
+                <button class="tetris-primary" id="tetris-play-btn" type="button">Play Now</button>
+
+                <div class="tetris-gameover" id="tetris-gameover" style="display:none;">
+                  <p class="tetris-subtext" id="tetris-final"></p>
+
+                  <label class="tetris-label" for="tetris-name">Your name</label>
+                  <input id="tetris-name" class="tetris-input" type="text" maxlength="16" placeholder="Damon" />
+
+                  <button class="tetris-secondary" id="tetris-save-score" type="button">Save Score</button>
+                  <button class="tetris-primary" id="tetris-restart-btn" type="button">Restart</button>
+                </div>
+
+                <details class="tetris-rules">
+                  <summary>Rules & controls</summary>
+
+                  <div class="tetris-rules-body">
+                    <p><strong>Goal:</strong> Clear lines by filling rows with blocks. Each cleared line gives points. The game speeds up as you level up.</p>
+                    <ul>
+                      <li><strong>Move:</strong> Left / Right</li>
+                      <li><strong>Rotate:</strong> Up / Rotate button</li>
+                      <li><strong>Soft drop:</strong> Down</li>
+                      <li><strong>Hard drop:</strong> Space / Drop button</li>
+                      <li><strong>Hold:</strong> C / Hold button</li>
+                    </ul>
+                  </div>
+                </details>
+              </div>
+            </div>
+          </div>
+
+          <aside class="tetris-panel">
+            <div class="tetris-stats">
+              <div class="tetris-stat">
+                <span>Score</span>
+                <strong id="tetris-score">0</strong>
+              </div>
+
+              <div class="tetris-stat">
+                <span>Level</span>
+                <strong id="tetris-level">1</strong>
+              </div>
+
+              <div class="tetris-stat">
+                <span>Lines</span>
+                <strong id="tetris-lines">0</strong>
+              </div>
+            </div>
+
+            <div class="tetris-previews">
+              <div class="tetris-preview">
+                <span>Next</span>
+                <canvas width="128" height="128" id="tetris-next"></canvas>
+              </div>
+
+              <div class="tetris-preview">
+                <span>Hold</span>
+                <canvas width="128" height="128" id="tetris-hold"></canvas>
+              </div>
+            </div>
+
+            <div class="tetris-highscores">
+              <h3>Top Scores</h3>
+              <ol id="tetris-highscore-list"></ol>
+            </div>
+          </aside>
+        </div>
+
+        <div class="tetris-controls" id="tetris-controls" aria-label="Tetris controls">
+          <button type="button" class="tetris-btn" data-action="left">Left</button>
+          <button type="button" class="tetris-btn" data-action="rotate">Rotate</button>
+          <button type="button" class="tetris-btn" data-action="right">Right</button>
+          <button type="button" class="tetris-btn" data-action="down">Down</button>
+          <button type="button" class="tetris-btn" data-action="drop">Drop</button>
+          <button type="button" class="tetris-btn" data-action="hold">Hold</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section leaderboard-note">
+      <div class="leaderboard-note-card">
+        <p class="eyebrow">Leaderboard Note</p>
+        <h2>Global scores need a database.</h2>
+        <p>
+          The current version stores scores on each player’s own device. To show scores from every player,
+          Curry Bible will need a shared database when moved to WordPress.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <h3>Curry Bible</h3>
+      </div>
+
+      <div>
+        <h3>Pages</h3>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="our-mission.html">Our Mission</a>
+          <a href="curry-bible-uk.html">Curry Bible UK</a>
+          <a href="curry-bible-europe.html">Curry Bible Europe</a>
+          <a href="cool-curries.html">Cool Curries</a>
+          <a href="return-visits.html">Return Visits</a>
+          <a href="retro-games.html">Retro Games</a>
+        </div>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <a href="mailto:thecurryclub2025@gmail.com">thecurryclub2025@gmail.com</a>
+
+        <h3 class="socials-title">Socials</h3>
+        <a href="https://www.instagram.com/curryclubgram" target="_blank" rel="noopener noreferrer">
+          Instagram: curryclubgram
+        </a>
+      </div>
+
+      <div>
+        <h3>Whats The Point Of This</h3>
+        <p>
+          Our goal is simple: help people find genuinely great curry. Not the average, forgettable stuff —
+          the places worth travelling for. We’re here to set a clear standard of what a good curry house
+          should be, based on real experiences from a team with completely different tastes.
+        </p>
+      </div>
+    </div>
+
+    <p class="footer-copyright">&copy; 2026 Curry Bible. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="tetris.js"></script>
+</body>
+</html>
