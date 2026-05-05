@@ -1181,3 +1181,136 @@ body.dark-mode .site-header {
   background-size: cover;
   background-position: center;
 }
+
+/* =====================
+   COOL CURRIES PAGE
+===================== */
+
+.cool-curries-hero {
+  min-height: 48vh;
+  display: flex;
+  align-items: center;
+  padding: 6%;
+  background:
+    linear-gradient(rgba(43, 26, 18, 0.76), rgba(43, 26, 18, 0.84)),
+    url("https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.cool-curries-hero-content {
+  max-width: 920px;
+}
+
+.cool-curries-hero h1 {
+  font-size: clamp(3rem, 7vw, 5.8rem);
+  line-height: 0.95;
+  margin-bottom: 1.25rem;
+}
+
+.cool-curries-hero p {
+  font-size: 1.2rem;
+  max-width: 720px;
+}
+
+.cool-curry-card {
+  background: var(--surface);
+  border-radius: 32px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  transition: transform 0.2s ease;
+}
+
+.cool-curry-card:hover {
+  transform: translateY(-4px);
+}
+
+.cool-curry-image {
+  min-height: 320px;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.1)),
+    url("https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=900&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+.cool-curry-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.cool-curry-content h2 {
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  line-height: 1.05;
+  margin-bottom: 0.75rem;
+}
+
+.cool-curry-content p {
+  color: var(--muted);
+  font-size: 1.05rem;
+  max-width: 760px;
+}
+
+.cool-curry-content p + p {
+  margin-top: 0.85rem;
+}
+
+.cool-curry-content .btn {
+  margin-top: 1.4rem;
+}
+
+.featured-cool-curry .cool-curry-image {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.1)),
+    url("https://images.unsplash.com/photo-1517244683847-7456b63c5969?auto=format&fit=crop&w=900&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+
+/* =====================
+   COOL CURRIES RESPONSIVE
+===================== */
+
+@media (max-width: 700px) {
+  .cool-curry-card {
+    grid-template-columns: 1fr;
+  }
+
+  .cool-curry-image {
+    min-height: 240px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cool-curries-hero {
+    min-height: 42vh;
+    padding: 5%;
+  }
+
+  .cool-curries-hero h1 {
+    font-size: clamp(2.7rem, 13vw, 4.5rem);
+  }
+
+  .cool-curries-hero p {
+    font-size: 1.05rem;
+  }
+
+  .cool-curry-card {
+    border-radius: 26px;
+  }
+
+  .cool-curry-content {
+    padding: 1.5rem;
+  }
+
+  .cool-curry-content .btn {
+    width: 100%;
+  }
+}
