@@ -884,3 +884,357 @@ body.dark-mode .site-header {
     width: 100%;
   }
 }
+
+/* =====================
+   CURRY BIBLE UK PAGE
+===================== */
+
+.uk-reviews-hero {
+  min-height: 72vh;
+  display: flex;
+  align-items: center;
+  padding: 6%;
+  background:
+    linear-gradient(rgba(43, 26, 18, 0.76), rgba(43, 26, 18, 0.84)),
+    url("https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.uk-reviews-hero-content {
+  max-width: 860px;
+}
+
+.uk-reviews-hero h1 {
+  font-size: clamp(3rem, 7vw, 6.2rem);
+  line-height: 0.95;
+  margin-bottom: 1.5rem;
+}
+
+.uk-reviews-hero p {
+  font-size: 1.25rem;
+  max-width: 720px;
+}
+
+.uk-intro-card {
+  background: var(--surface);
+  padding: 3rem;
+  border-radius: 32px;
+  box-shadow: var(--shadow);
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.uk-intro-card h2,
+.main-status-card h2,
+.review-filter-mockup h2,
+.map-style-card h2,
+.uk-final-cta h2 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.05;
+  margin-bottom: 1.25rem;
+}
+
+.uk-intro-card p,
+.status-card p,
+.future-review-card p,
+.map-style-card p,
+.uk-final-cta p {
+  color: var(--muted);
+  font-size: 1.08rem;
+}
+
+.uk-intro-card p + p {
+  margin-top: 1rem;
+}
+
+.review-status-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.status-card {
+  background: var(--surface);
+  padding: 2rem;
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+}
+
+.main-status-card {
+  background: linear-gradient(135deg, #fff1d8, #d9a066);
+  color: #2b1a12;
+}
+
+.main-status-card .eyebrow {
+  color: #6b3e26;
+}
+
+.main-status-card p {
+  color: #3d2619;
+  margin-bottom: 1.5rem;
+}
+
+.status-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 1.25rem;
+  border-radius: 50%;
+  background: var(--primary);
+  color: var(--accent);
+  font-weight: 900;
+}
+
+.status-card h3 {
+  font-size: 1.35rem;
+  margin-bottom: 0.75rem;
+}
+
+.mock-filter-bar {
+  display: flex;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.mock-filter-bar button {
+  border: none;
+  background: var(--surface);
+  color: var(--primary);
+  padding: 0.8rem 1.1rem;
+  border-radius: 999px;
+  font-weight: 900;
+  cursor: default;
+  box-shadow: var(--shadow);
+}
+
+.future-review-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.future-review-card {
+  background: var(--surface);
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease;
+}
+
+.future-review-card:hover {
+  transform: translateY(-6px);
+}
+
+.featured-review-placeholder {
+  grid-row: span 2;
+}
+
+.placeholder-image {
+  min-height: 320px;
+  background:
+    linear-gradient(135deg, rgba(43, 26, 18, 0.82), rgba(217, 160, 102, 0.72)),
+    url("https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=1200&q=80");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  padding: 1.5rem;
+}
+
+.placeholder-image.small {
+  min-height: 190px;
+}
+
+.placeholder-image span {
+  background: rgba(255, 248, 239, 0.9);
+  color: #2b1a12;
+  padding: 0.65rem 1rem;
+  border-radius: 999px;
+  font-weight: 900;
+}
+
+.future-review-content {
+  padding: 1.5rem;
+}
+
+.future-review-content h3 {
+  font-size: 1.45rem;
+  margin-bottom: 0.4rem;
+}
+
+.uk-map-style-section {
+  padding-top: 2rem;
+}
+
+.map-style-card {
+  background:
+    radial-gradient(circle at top left, rgba(217, 160, 102, 0.95), transparent 32%),
+    linear-gradient(135deg, rgba(43, 26, 18, 0.96), rgba(107, 62, 38, 0.92)),
+    url("https://images.unsplash.com/photo-1543353071-10c8ba85a904?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 4rem;
+  border-radius: 36px;
+  box-shadow: var(--shadow);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: end;
+}
+
+.map-style-card p {
+  color: #f5e6d3;
+}
+
+.uk-final-cta {
+  text-align: center;
+}
+
+.uk-final-cta p {
+  max-width: 720px;
+  margin: 0 auto 1.75rem;
+}
+
+.uk-final-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+
+/* =====================
+   CURRY BIBLE UK RESPONSIVE
+===================== */
+
+@media (max-width: 1200px) {
+  .review-status-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .main-status-card {
+    grid-column: 1 / -1;
+  }
+
+  .future-review-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .featured-review-placeholder {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+}
+
+@media (max-width: 1000px) {
+  .map-style-card {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .uk-reviews-hero {
+    min-height: 68vh;
+    padding: 5%;
+  }
+
+  .uk-reviews-hero h1 {
+    font-size: clamp(2.8rem, 13vw, 4.7rem);
+  }
+
+  .uk-reviews-hero p {
+    font-size: 1.1rem;
+  }
+
+  .uk-intro-card,
+  .status-card,
+  .map-style-card {
+    padding: 2rem;
+    border-radius: 24px;
+  }
+
+  .review-status-grid {
+    display: flex;
+    gap: 1.25rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 1rem;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .status-card {
+    flex: 0 0 86%;
+    scroll-snap-align: start;
+  }
+
+  .review-status-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .review-status-grid {
+    scrollbar-width: none;
+  }
+
+  .mock-filter-bar {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 0.75rem;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .mock-filter-bar button {
+    white-space: nowrap;
+  }
+
+  .mock-filter-bar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .mock-filter-bar {
+    scrollbar-width: none;
+  }
+
+  .future-review-grid {
+    display: flex;
+    gap: 1.25rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 1rem;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .future-review-card,
+  .featured-review-placeholder {
+    flex: 0 0 86%;
+    scroll-snap-align: start;
+  }
+
+  .future-review-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .future-review-grid {
+    scrollbar-width: none;
+  }
+
+  .placeholder-image,
+  .placeholder-image.small {
+    min-height: 230px;
+  }
+
+  .uk-final-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .uk-final-buttons .btn {
+    width: 100%;
+  }
+}
